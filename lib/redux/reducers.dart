@@ -3,7 +3,7 @@ import 'package:flutter_redux_presentation/redux/app_state.dart';
 
 enum Actions { action1, action2, action3 }
 
-AppState appReducer(AppState state, action) {
+AppState appReducer(AppState state, dynamic action) {
   if (action is LoadAction1) {
     print('Reducer action1');
     return state.copyWith(output: 'Action 1');

@@ -1,7 +1,7 @@
 import 'package:flutter_redux_presentation/redux/app_state.dart';
 import 'package:redux/redux.dart';
 
-const middlewares = [middleware1, middleware2, middleware3];
+const middleWares = [middleware1, middleware2, middleware3];
 
 void middleware1(Store<AppState> store, dynamic action, NextDispatcher next) {
   print('Middleware 1  A');

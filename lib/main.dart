@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   final _store = new Store<AppState>(
     appReducer,
     initialState: new AppState.initialize(),
-    middleware: middlewares,
+    middleware: middleWares,
   );
 
   @override
