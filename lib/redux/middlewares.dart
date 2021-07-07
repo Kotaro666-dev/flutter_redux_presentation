@@ -1,6 +1,10 @@
 import 'package:flutter_redux_presentation/redux/app_state.dart';
 import 'package:redux/redux.dart';
 
+/// ========================== 通常のミドルウェア方式 ==============================
+
+/// Action が実行されたら、appVoidMiddlewareに挿入されたミドルウェアを順番に実行していく
+
 List<Middleware<AppState>> appVoidMiddleware = [
   middleware1,
   middleware2,
@@ -26,11 +30,11 @@ void middleware3(Store<AppState> store, dynamic action, NextDispatcher next) {
 }
 
 /// ========================== 型付けミドルウェア方式 ==============================
-
+///
 /// A convenience type for binding a piece of Middleware to an Action of a specific type.
 /// Allows for Type Safe Middleware and reduces boilerplate.
 /// Create a Middleware that is only executed when the dispatched action matches the Action type.
-
+///
 /// void call(Store<State> store, dynamic action, NextDispatcher next) {
 ///    if (action is Action) {
 ///      middleware(store, action, next);
