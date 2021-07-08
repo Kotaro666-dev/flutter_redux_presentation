@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter_redux_presentation/redux/actions.dart';
 import 'package:flutter_redux_presentation/redux/app_state.dart';
-import 'package:flutter_redux_presentation/redux/middlewares.dart';
+import 'package:flutter_redux_presentation/redux/middleware.dart';
 import 'package:flutter_redux_presentation/redux/reducers.dart';
 import 'package:redux/redux.dart';
 
