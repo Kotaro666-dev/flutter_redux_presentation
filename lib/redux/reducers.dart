@@ -15,6 +15,9 @@ AppState appReducer(AppState state, dynamic action) {
   } else if (action is LoadAction3) {
     print('Reducer action3');
     return state.copyWith(output: 'Action 3');
+  } else if (action is LoadAction4) {
+    print('Reducer action4');
+    return state.copyWith(output: 'Action 4');
   }
   return state;
 }
@@ -32,25 +35,31 @@ AppState appReducer(AppState state, dynamic action) {
 ///      return state;
 ///  }
 
-// final Reducer<AppState> appReducer = combineReducers(
-//   [
-//     ReducerOf<AppState, LoadAction1>(
-//       callback: (state, action) {
-//         print('Reducer action1');
-//         return state.copyWith(output: 'Action 1');
-//       },
-//     ),
-//     ReducerOf<AppState, LoadAction2>(
-//       callback: (state, action) {
-//         print('Reducer action2');
-//         return state.copyWith(output: 'Action 2');
-//       },
-//     ),
-//     ReducerOf<AppState, LoadAction3>(
-//       callback: (state, action) {
-//         print('Reducer action3');
-//         return state.copyWith(output: 'Action 3');
-//       },
-//     ),
-//   ],
-// );
+final Reducer<AppState> appTypedReducer = combineReducers(
+  [
+    ReducerOf<AppState, LoadAction1>(
+      callback: (state, action) {
+        print('Reducer action1');
+        return state.copyWith(output: 'Action 1');
+      },
+    ),
+    ReducerOf<AppState, LoadAction2>(
+      callback: (state, action) {
+        print('Reducer action2');
+        return state.copyWith(output: 'Action 2');
+      },
+    ),
+    ReducerOf<AppState, LoadAction3>(
+      callback: (state, action) {
+        print('Reducer action3');
+        return state.copyWith(output: 'Action 3');
+      },
+    ),
+    ReducerOf<AppState, LoadAction4>(
+      callback: (state, action) {
+        print('Reducer action4');
+        return state.copyWith(output: 'Action 4');
+      },
+    ),
+  ],
+);

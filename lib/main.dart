@@ -13,6 +13,7 @@ void main() {
 class MyApp extends StatelessWidget {
   final _store = new Store<AppState>(
     appReducer,
+    // appTypedReducer,
     initialState: new AppState.initialize(),
     middleware: appVoidMiddleware,
     // middleware: appTypedMiddleware,
@@ -57,20 +58,30 @@ class HomePage extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       store.dispatch(LoadAction1());
+                      print('########################');
                     },
                     child: Text('Action 1'),
                   ),
                   ElevatedButton(
                     onPressed: () {
                       store.dispatch(LoadAction2());
+                      print('########################');
                     },
                     child: Text('Action 2'),
                   ),
                   ElevatedButton(
                     onPressed: () {
                       store.dispatch(LoadAction3());
+                      print('########################');
                     },
                     child: Text('Action 3'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      store.dispatch(LoadAction4());
+                      print('########################');
+                    },
+                    child: Text('Action 4'),
                   ),
                 ],
               ),
