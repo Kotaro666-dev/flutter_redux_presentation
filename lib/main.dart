@@ -57,29 +57,33 @@ class HomePage extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
+                      print('###### dispatching LoadAction 1 #####');
                       store.dispatch(LoadAction1());
-                      print('########################');
+                      print('############## END ##################');
                     },
                     child: Text('Action 1'),
                   ),
                   ElevatedButton(
                     onPressed: () {
+                      print('###### dispatching LoadAction 2 #####');
                       store.dispatch(LoadAction2());
-                      print('########################');
+                      print('############## END ##################');
                     },
                     child: Text('Action 2'),
                   ),
                   ElevatedButton(
                     onPressed: () {
+                      print('###### dispatching LoadAction 3 #####');
                       store.dispatch(LoadAction3());
-                      print('########################');
+                      print('############## END ##################');
                     },
                     child: Text('Action 3'),
                   ),
                   ElevatedButton(
                     onPressed: () {
+                      print('###### dispatching LoadAction 4 #####');
                       store.dispatch(LoadAction4());
-                      print('########################');
+                      print('############## END ##################');
                     },
                     child: Text('Action 4'),
                   ),
